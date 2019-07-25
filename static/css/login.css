@@ -1,0 +1,97 @@
+.login{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.login h3{
+	margin: 0 auto;
+	font-size: 50px;
+	margin-bottom: 40px;
+	padding-top: 30px;
+	text-align: center;
+	width: 360px;
+	line-height: 60px;
+}
+.login .form-horizontal{
+	width: 360px;
+	margin: 0 auto;
+	border: 1px solid #e9ebef;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 10px 55px #e9ebef;
+    box-shadow: 0px 10px 55px #e9ebef;
+}
+.login .form-horizontal .title{
+	width: 100%;
+    height: 58px;
+    border-bottom: 1px solid #e9ebef;
+    font-size: 20px;
+    color: #404040;
+    padding-left: 45px;
+    line-height: 58px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+.login .form-horizontal .title h5{
+	display: inline-block;
+    float: right;
+    height: 58px;
+    line-height: 80px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 14px;
+}
+.login .form-horizontal .title h5 a{
+	color: #FF6863;
+	cursor: pointer;
+}
+.login .form-horizontal .row{
+	margin-right: 0px;
+    margin-left: 0px;
+}
+.login .form-horizontal .form-group{
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.login_label{
+	font-size: 18px;
+	font-weight: 100;
+}
+.login .form-horizontal p{
+	font-size: 14px;
+	color: #ff6863;
+	text-align: center;
+	margin-top: -5px;
+	height: 14px;
+}
+.forget{
+	font-size: 16px;
+	color: #A5A5C2;
+	margin-bottom: 20px;
+	margin-top: -5px;
+	display: block;
+}
+.login .form-horizontal .title-r{
+	padding-left: 0;
+	text-align: center;
+}
+.submit-img{
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.next_step,.submit_t,.login_btn{
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background: #FF6863;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

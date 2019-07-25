@@ -1,0 +1,38 @@
+.cityinfo_label{
+	font-size: 16px;
+    font-weight: 100;
+    margin-left: 20px;
+}
+.cityinfo-btn{
+	border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    background: #FF6863;
+    display: block;
+    line-height: 31px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+#map-community{
+	height: 200px;
+}
+legend{
+	color:#35a566 !important;
+}
+.cityinfo-input{
+	position:relative;
+	padding-right: 45px;
+}
+.cityinfo-div-j{
+	position:absolute;
+	right:25px;
+	top:8px;
+	color:#aaa;
+}
+.cityinfo-btn-t{
+	width: 100%;
+	font-size: 2rem;
+}

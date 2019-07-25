@@ -1,0 +1,716 @@
+createStream() =>
+Pili\Stream::__set_state(array(
+   '_transport' => 
+  Pili\Transport::__set_state(array(
+     '_credentials' => 
+    Qiniu\Credentials::__set_state(array(
+       '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+       '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+    )),
+  )),
+   '_data' => 
+  array (
+    'id' => 'z1.moke.58246a5c5e77b0082904190e',
+    'createdAt' => '2016-11-10T12:38:52.752Z',
+    'updatedAt' => '2016-11-10T12:38:52.752Z',
+    'expireAt' => '2016-11-26T20:38:52.752962841+08:00',
+    'title' => '58246a5c5e77b0082904190e',
+    'hub' => 'moke',
+    'disabledTill' => 0,
+    'disabled' => false,
+    'publishKey' => '00314f8ed5458364',
+    'publishSecurity' => 'none',
+    'hosts' => 
+    array (
+      'publish' => 
+      array (
+        'rtmp' => 'pili-publish.toqive.com.cn',
+      ),
+      'live' => 
+      array (
+        'hdl' => 'pili-live-hdl.toqive.com.cn',
+        'hls' => 'pili-live-hls.toqive.com.cn',
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+        'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+      ),
+      'playback' => 
+      array (
+        'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+        'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+      ),
+      'play' => 
+      array (
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+      ),
+    ),
+    'nropEnable' => NULL,
+  ),
+))
+
+getStream() =>
+Pili\Stream::__set_state(array(
+   '_transport' => 
+  Pili\Transport::__set_state(array(
+     '_credentials' => 
+    Qiniu\Credentials::__set_state(array(
+       '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+       '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+    )),
+  )),
+   '_data' => 
+  array (
+    'id' => 'z1.moke.58246a5c5e77b0082904190e',
+    'createdAt' => '2016-11-10T20:38:52.752+08:00',
+    'updatedAt' => '2016-11-10T20:38:52.752+08:00',
+    'expireAt' => '2016-11-26T20:38:52.752+08:00',
+    'title' => '58246a5c5e77b0082904190e',
+    'hub' => 'moke',
+    'disabledTill' => 0,
+    'disabled' => false,
+    'publishKey' => '00314f8ed5458364',
+    'publishSecurity' => 'none',
+    'hosts' => 
+    array (
+      'publish' => 
+      array (
+        'rtmp' => 'pili-publish.toqive.com.cn',
+      ),
+      'live' => 
+      array (
+        'hdl' => 'pili-live-hdl.toqive.com.cn',
+        'hls' => 'pili-live-hls.toqive.com.cn',
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+        'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+      ),
+      'playback' => 
+      array (
+        'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+        'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+      ),
+      'play' => 
+      array (
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+      ),
+    ),
+    'nropEnable' => NULL,
+  ),
+))
+
+listStreams() =>
+array (
+  'marker' => '10',
+  'items' => 
+  array (
+    0 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.58246a5c5e77b0082904190e',
+        'createdAt' => '2016-11-10T20:38:52.752+08:00',
+        'updatedAt' => '2016-11-10T20:38:52.752+08:00',
+        'expireAt' => '2016-11-26T20:38:52.752+08:00',
+        'title' => '58246a5c5e77b0082904190e',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    1 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.582466f01013856cfe0406b8',
+        'createdAt' => '2016-11-10T20:24:16.898+08:00',
+        'updatedAt' => '2016-11-10T20:24:17.14+08:00',
+        'expireAt' => '2016-11-26T20:24:16.898+08:00',
+        'title' => '582466f01013856cfe0406b8',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => 'new_secret_words',
+        'publishSecurity' => 'static',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    2 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.582466de1013856cfe040656',
+        'createdAt' => '2016-11-10T20:23:58.626+08:00',
+        'updatedAt' => '2016-11-10T20:23:58.888+08:00',
+        'expireAt' => '2016-11-26T20:23:58.626+08:00',
+        'title' => '582466de1013856cfe040656',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => 'new_secret_words',
+        'publishSecurity' => 'static',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    3 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.fdsafsdafs',
+        'createdAt' => '2016-11-10T14:55:37.262+08:00',
+        'updatedAt' => '2016-11-10T14:55:37.262+08:00',
+        'expireAt' => '2016-11-26T14:55:37.262+08:00',
+        'title' => 'fdsafsdafs',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    4 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.fdsafds',
+        'createdAt' => '2016-11-10T14:54:34.703+08:00',
+        'updatedAt' => '2016-11-10T14:54:34.703+08:00',
+        'expireAt' => '2016-11-26T14:54:34.703+08:00',
+        'title' => 'fdsafds',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    5 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.fdsafdsafasdf',
+        'createdAt' => '2016-11-10T14:51:39.944+08:00',
+        'updatedAt' => '2016-11-10T14:51:39.944+08:00',
+        'expireAt' => '2016-11-26T14:51:39.944+08:00',
+        'title' => 'fdsafdsafasdf',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    6 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.fdsafdsa',
+        'createdAt' => '2016-11-10T14:32:28.808+08:00',
+        'updatedAt' => '2016-11-10T14:32:28.808+08:00',
+        'expireAt' => '2016-11-26T14:32:28.808+08:00',
+        'title' => 'fdsafdsa',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    7 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.abcdefghi',
+        'createdAt' => '2016-11-10T14:29:09.771+08:00',
+        'updatedAt' => '2016-11-10T14:29:09.771+08:00',
+        'expireAt' => '2016-11-26T14:29:09.771+08:00',
+        'title' => 'abcdefghi',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    8 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.abcdefgh',
+        'createdAt' => '2016-11-10T14:28:08.251+08:00',
+        'updatedAt' => '2016-11-10T14:28:08.251+08:00',
+        'expireAt' => '2016-11-26T14:28:08.251+08:00',
+        'title' => 'abcdefgh',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+    9 => 
+    Pili\Stream::__set_state(array(
+       '_transport' => 
+      Pili\Transport::__set_state(array(
+         '_credentials' => 
+        Qiniu\Credentials::__set_state(array(
+           '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+           '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+        )),
+      )),
+       '_data' => 
+      array (
+        'id' => 'z1.moke.abcdefg',
+        'createdAt' => '2016-11-10T14:27:20.552+08:00',
+        'updatedAt' => '2016-11-10T14:27:20.552+08:00',
+        'expireAt' => '2016-11-26T14:27:20.552+08:00',
+        'title' => 'abcdefg',
+        'hub' => 'moke',
+        'disabledTill' => 0,
+        'disabled' => false,
+        'publishKey' => '00314f8ed5458364',
+        'publishSecurity' => 'none',
+        'hosts' => 
+        array (
+          'publish' => 
+          array (
+            'rtmp' => 'pili-publish.toqive.com.cn',
+          ),
+          'live' => 
+          array (
+            'hdl' => 'pili-live-hdl.toqive.com.cn',
+            'hls' => 'pili-live-hls.toqive.com.cn',
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+            'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+          ),
+          'playback' => 
+          array (
+            'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+            'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+          ),
+          'play' => 
+          array (
+            'http' => 'pili-live-hls.toqive.com.cn',
+            'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+          ),
+        ),
+        'nropEnable' => NULL,
+      ),
+    )),
+  ),
+  'end' => false,
+)
+
+Stream toJSONString() =>
+'{"id":"z1.moke.58246a5c5e77b0082904190e","createdAt":"2016-11-10T20:38:52.752+08:00","updatedAt":"2016-11-10T20:38:52.752+08:00","expireAt":"2016-11-26T20:38:52.752+08:00","title":"58246a5c5e77b0082904190e","hub":"moke","disabledTill":0,"disabled":false,"publishKey":"00314f8ed5458364","publishSecurity":"none","hosts":{"publish":{"rtmp":"pili-publish.toqive.com.cn"},"live":{"hdl":"pili-live-hdl.toqive.com.cn","hls":"pili-live-hls.toqive.com.cn","http":"pili-live-hls.toqive.com.cn","rtmp":"pili-live-rtmp.toqive.com.cn","snapshot":"pili-live-snapshot.toqive.com.cn"},"playback":{"hls":"10004lx.playback1.z1.pili.qiniucdn.com","http":"10004lx.playback1.z1.pili.qiniucdn.com"},"play":{"http":"pili-live-hls.toqive.com.cn","rtmp":"pili-live-rtmp.toqive.com.cn"}},"nropEnable":null}'
+
+Stream update() =>
+Pili\Stream::__set_state(array(
+   '_transport' => 
+  Pili\Transport::__set_state(array(
+     '_credentials' => 
+    Qiniu\Credentials::__set_state(array(
+       '_accessKey' => 'H-XXK1YKv9S1Btd2fcXC2NaQb-KvrTUHCxhhJTRJ',
+       '_secretKey' => 'tKGq-NeRWt_c8rCt_o3WsIHOtkTsHAK7hF3VGYVS',
+    )),
+  )),
+   '_data' => 
+  array (
+    'id' => 'z1.moke.58246a5c5e77b0082904190e',
+    'createdAt' => '2016-11-10T20:38:52.752+08:00',
+    'updatedAt' => '2016-11-10T20:38:53.062507945+08:00',
+    'expireAt' => '2016-11-26T20:38:52.752+08:00',
+    'title' => '58246a5c5e77b0082904190e',
+    'hub' => 'moke',
+    'disabledTill' => 0,
+    'disabled' => false,
+    'publishKey' => 'new_secret_words',
+    'publishSecurity' => 'static',
+    'hosts' => 
+    array (
+      'publish' => 
+      array (
+        'rtmp' => 'pili-publish.toqive.com.cn',
+      ),
+      'live' => 
+      array (
+        'hdl' => 'pili-live-hdl.toqive.com.cn',
+        'hls' => 'pili-live-hls.toqive.com.cn',
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+        'snapshot' => 'pili-live-snapshot.toqive.com.cn',
+      ),
+      'playback' => 
+      array (
+        'hls' => '10004lx.playback1.z1.pili.qiniucdn.com',
+        'http' => '10004lx.playback1.z1.pili.qiniucdn.com',
+      ),
+      'play' => 
+      array (
+        'http' => 'pili-live-hls.toqive.com.cn',
+        'rtmp' => 'pili-live-rtmp.toqive.com.cn',
+      ),
+    ),
+    'nropEnable' => NULL,
+  ),
+))
+
+Stream disable() =>
+NULL
+
+Stream enable() =>
+NULL
+
+Stream status() =>
+array (
+  'streamId' => 'z1.moke.58246a5c5e77b0082904190e',
+  'reqId' => '',
+  'hub' => 'moke',
+  'stream' => '58246a5c5e77b0082904190e',
+  'startFrom' => '0001-01-01T08:00:00+08:00',
+  'updatedAt' => '2016-11-10T20:38:53.063+08:00',
+  'addr' => '',
+  'status' => 'disconnected',
+  'bytesPerSecond' => 0,
+  'framesPerSecond' => 
+  array (
+    'audio' => 0,
+    'video' => 0,
+    'data' => 0,
+  ),
+)
+
+Stream rtmpPublishUrl() =>
+rtmp://pili-publish.toqive.com.cn/moke/58246a5c5e77b0082904190e?key=new_secret_words
+
+Stream rtmpLiveUrls() =>
+array (
+  'ORIGIN' => 'rtmp://pili-live-rtmp.toqive.com.cn/moke/58246a5c5e77b0082904190e',
+)
+
+Stream hlsLiveUrls() =>
+array (
+  'ORIGIN' => 'http://pili-live-hls.toqive.com.cn/moke/58246a5c5e77b0082904190e.m3u8',
+)
+
+Stream httpFlvLiveUrls() =>
+array (
+  'ORIGIN' => 'http://pili-live-hdl.toqive.com.cn/moke/58246a5c5e77b0082904190e.flv',
+)
+
+Stream segments() =>
+array (
+  'start' => 0,
+  'end' => 0,
+  'duration' => 0,
+  'segments' => NULL,
+)
+

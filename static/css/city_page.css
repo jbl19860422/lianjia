@@ -1,0 +1,673 @@
+.btn:active, .btn.active{
+	-webkit-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	background: blueviolet !important;
+}
+.submenu {
+	height:40px;
+	line-height:40px;
+	background-color:#f9f9f9;
+	font-size:1.4rem;
+	padding-left:calc(12.5% + 100px);
+	border-bottom:1px solid #dfdfdf;
+}
+.cityinfo-menus{
+	margin-bottom: 0;
+}
+.cityinfo-menus li {
+	float:left;
+	padding-left:2rem;
+	padding-right:2rem;
+	height:40px;
+	line-height:40px;
+}
+
+.cityinfo-menus li.active a {
+	color:#FF6863;
+	text-decoration: underline;
+}
+
+.cityinfo-menus a {
+	color:#A5A5A5;
+	font-size: 14px;
+	text-align: center;
+}
+.breadcrumb-div{
+	height: 45px;	
+}
+.breadcrumb-div ul{
+	margin-bottom: 0;
+}
+.breadcrumb-div ul li {
+	float:left;
+	color:#A5A5A5;
+	font-size:12px;
+	line-height: 45px;	
+}
+.panel-title{
+	height: 45px;
+}
+.panel-p{
+	font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #a5a5a5;
+    float: left;
+}  
+.panel-r{
+	float: right;
+	font-size: 16px;
+	font-weight: 600;
+	color: #36a765;
+	cursor: pointer;
+}
+.panel-r i{
+	font-size: 16px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+.city-dl{
+	float: left;
+	margin-left: 20px;
+}
+.city-dl dt{
+	font-size: 16px;
+	float: left;
+	font-weight: 100;
+}
+.city-dl dd{
+	float: left;
+}
+.city_select{
+	width: 70px;
+    height: 25px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.city_select option{
+	font-size: 14px;
+}
+.mg-top-20 {
+	margin-top:20px;
+}
+
+.area-list li{
+	margin-left:20px;
+	position:relative;
+	margin-bottom: 20px;
+}
+
+.area-list li .del-btn {
+	display:none;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	text-align:center;
+	line-height:17px;
+	background-color:red;
+	font-size: 16px;
+}
+
+.area-list li:hover .del-btn{
+	display:block;
+}
+
+.hide {
+	display:none;
+}
+
+.webbox-dlg-bg{
+	width:100%;
+	height:100%;
+	z-index:100001;
+	background-color:rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.webbox-header{
+	height:45px;
+	border-bottom:1px solid #ddd;
+}
+.webbox-title{
+	height: 45px;
+	line-height: 45px;
+	text-align:center;
+	font-size:18px;
+}
+.webbox-body-div label{
+	font-size: 16px;
+	font-weight: 100;
+}
+#webbox-dlg-div{
+	position:absolute;
+	z-index:999999 !important;
+	width:360px;
+	height:232px;
+	border-radius:15px !important;
+	border:1px solid #ddd;
+	left:50%;
+	top:50%;
+	margin-left:-180px;
+	margin-top:-116px;
+	background:#fff;
+}
+.webbox-header span{
+	position:absolute;
+	top:5px;
+	right:20px;
+	cursor:pointer;
+	font-size:3rem;
+	font-weight:bold;
+	line-height:1;
+	color:#000;
+	text-shadow:0 1px #fff;
+	opacity:2;
+	display:block
+}
+.webbox-body{
+	text-align: center;
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.webbox-btn{
+	height:50px;
+	width:100%;
+	border-top: 1px solid #ccc;
+	font-size: 16px;
+}
+.determine-btn{
+	width: 50%;
+	height: 50px;
+	float: left;
+	background: none;
+	border: none;
+	
+}
+.cancel-btn{
+	width: 49%;
+	height: 50px;
+	float: right;
+	background: none;
+	border: none;
+	border-left: 1px solid #ccc;
+	
+}
+
+/*****school_page******/
+
+.row:after {
+	clear:both;
+}
+.school-list li{
+    height: 160px;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+.school-list li dl{
+	margin-left: 20px;
+	margin-bottom: 0;
+	height: 160px;
+}
+.school-list li dl dt{
+	height: 160px;
+	float: left;	
+}
+.school-list li dl dt img{
+	width: 150px;
+	height: 140px;
+	line-height: 140px;
+	margin-top: 10px;
+}
+.school-list li dl dd{
+	float: left;
+	margin-left: 20px;
+	width: 270px;
+}
+.school-list li dl dd h2{
+	font-size: 30px;
+    margin-top: 10px;
+    width: 260px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.school-list li dl dd h3{
+	font-size: 18px;
+}
+.school-list li dl dd p{
+    font-size: 16px;
+}
+.school-list li dl dd p span{
+	font-size: 16px;
+}
+.school-img{
+    margin-left: 20px;
+    height: 300px;
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.school-img img{
+	width: 100%;
+	height: 100%;
+}
+.school-w{
+	height: 300px;
+}
+.school-label{
+	font-size: 18px;
+	font-weight: 400;
+}
+.school-d{
+	height: 300px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.school-btn{
+	height: 45px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 45px;
+}
+.school-btn span{
+	padding:10px 20px;
+	background-color:#FF6863;
+	color:#fff;
+	cursor:pointer;
+	border-radius:5px;
+}  
+.school-btn span:first-child{
+	margin-right:20px;
+}
+.btn-area {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.3);
+	display:none;
+}
+		
+.school-list li:hover .btn-area {
+	display:block;
+}
+		
+.school-list li .del-btn{
+	display:none;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	text-align:center;
+	line-height:20px;
+	background-color:red;
+}
+		
+.school-list li:hover .del-btn{
+	display:block;
+}
+		
+.hide {
+	display:none;
+}
+#btn-change-img{
+	position:absolute;
+	display:block;
+	cursor:pointer;
+	height:30px;
+	background-color:red;
+	width:100%;
+	bottom:0px;
+	color:#fff;
+	text-align:center;
+	font-size:1.5rem;
+	line-height:30px;
+}		
+.btn-area-s{
+	position:absolute;
+	display:block;
+	cursor:pointer;
+	height:30px;
+	background-color:red;
+	width:100%;
+	bottom:0px;
+	color:#fff;
+	text-align:center;
+	font-size:1.5rem;
+	line-height:30px;
+}	
+	
+.school-img:hover .btn-area {
+	display:block;
+}
+/****subway_page******/
+		
+.subway-map{
+	margin-left: 20px;
+    height: 300px;
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row:after {
+	clear:both;
+}
+
+.subway-list li{
+	margin-left:20px;
+	position:relative;
+}
+		
+.subway-station-list li {
+	margin-left:20px;
+	position:relative;
+}
+		
+.subway-station-list li:hover .del-btn{
+	display:block;
+}
+		
+.btn-area {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.3);
+	display:none;
+}
+		
+.subway-list li:hover .btn-area {
+	display:block;
+}
+		
+.subway-list li:hover .del-btn,.door_number:hover .del-btn{
+	display:block;
+}
+
+.hide {
+	display:none;
+}
+
+.subway-list .active {
+	background-color:red;
+}
+.school-img:hover .btn-area {
+	display:block;
+}
+
+
+/*****house******/
+/***house_list_page.php***/
+.house-list-a{
+	color: #000000;
+}
+.house-list-a:hover{
+	color: #FF6863;
+}
+.community .table > tbody > tr > td{
+	padding: 0;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+}
+.community .table .house-label {
+	max-width: 100px;
+    background: #FF6863;
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(240, 125, 100) 5px 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    height: 35px;
+    margin-top: 5px;
+    line-height: 35px;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+
+/***********house***********/
+/***********house_add_page***********/
+.btn-add{
+	margin-left: 10px;
+	padding: 2px 12px;
+}
+.door_number{
+	margin-right: 15px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.door_number .del-btn{
+	display:none;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	text-align:center;
+	line-height:17px;
+	background-color:red;
+	font-size: 16px;
+}
+
+#page_navigation{
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+#page_navigation a{
+	padding: 5px 10px;
+    border: 1px solid gray;
+    margin: 2px;
+    color: black;
+    text-decoration: none;
+}
+.active_page{
+	background:#FF6863;
+	color:white !important;
+}
+.ul-top li{
+	float: left;
+	font-size: 16px;
+	color: #000;
+	
+}
+.content-table tbody{
+	height: 50px;
+	width: 960px;
+	overflow: hidden;
+}
+.content-table tbody tr{
+	height: 25px;
+	line-height: 25px;
+}
+.content-table tbody tr .td_x,.li_x{
+	width: 200px;
+	font-size: 14px;
+}
+.content-table tbody tr .td_n,.li_n{
+	width: 600px;
+}
+.content-table tbody tr .td_n a{
+	font-size: 14px;
+}
+.content-table tbody tr .td_q,.li_q{
+	font-size: 14px;
+}
+/*****house_op_log_page.php*********/
+.xiu{
+	border-bottom: 1px solid #ccc;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.xiu-div{
+	margin-bottom: 10px;
+}
+.form-option-x span{
+	margin-left: 0 !important;
+	font-size: 14px;
+}
+.xiu-table{
+	width: 1024px;
+	margin-bottom: 25px;
+}
+
+.xiu-table tr th{
+	text-align: center;
+	text-align: center;
+    height: 60px;
+    font-size: 14px;
+    background: #ccc;
+}
+.xiu-table tr td{
+	height: 40px;
+	text-align: center;
+}
+.xiu-div-next{
+	float: right;
+	margin-bottom: 20px;
+}
+
+
+/*实名认证*/
+.center{
+	width: 900px;
+	margin: 0 auto;
+}
+.center-top{
+	width: 100%;
+	height: 50px;
+}
+.center-top-d{
+	width: 300px;
+	float: left;
+	height: 50px;
+	text-align: center;
+	position: relative;
+}
+.center-num{
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 20px;
+	color: #ccc;
+	margin: 0 auto;
+}
+.center-top-d h4{
+	font-size: 16px;
+	color: #ccc;
+}
+.center-line{
+	height: 1px;
+    width: 270px;
+    position: absolute;
+    top: 10px;
+    left: 165px;
+    background: #ccc;
+}
+.active-v{
+	color: #36a765;
+	border: 1px solid #36a765;
+}
+.center-top-d .active-h{
+	color: #36a765;
+}
+.form-v{
+	width: 600px;
+	min-height: 300px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+.form-v-p{
+	font-size: 20px;
+	color: #36a765;
+	margin-left: 15px;
+	float: left;
+}
+.form-v-label{
+	font-size: 16px;
+	color: #ccc;
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.form-v-title svg{
+	float: left;
+	font-size: 30px;
+	margin-left: 10px;
+	color: #36a765;
+}
+.s-img{
+	width: 100px;
+	margin-bottom: 10px;
+}
+.form-v .radio-inline + .radio-inline{
+	margin-left: 0;
+}
+.s-cimg{
+	width: 370px;
+	height: 150px;
+	border: 1px dashed #ccc;
+	line-height: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+.s-cimg svg{
+	font-size: 40px;
+}
+.year{
+	font-size: 20px;
+	margin-left: -20px;
+}
+/*认证详情*/
+.detailsVfd{
+	width: 900px;
+	min-height: 300px;
+	margin: 0 auto;
+}
+
+.details-title svg{
+	float: left;
+	color: #36A765;
+	font-size: 30px;
+}
+.details-center{
+	margin-top: 55px;
+}
+.details-center-label{
+	font-size: 18px;
+	color: #666666;
+	font-weight: 100;
+}
+.details-center-div{
+	font-size: 18px;
+	color: #36A765;
+	font-weight: 100;
+}

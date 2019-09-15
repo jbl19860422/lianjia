@@ -46,6 +46,8 @@
 	</style>
 </head>
 <body>
+<div class="mask">
+</div>
 <div id="content_warp">
 	<div class="header">
 		<div class="bar mg-c">

@@ -46,7 +46,8 @@
 	</style>
 </head>
 <body>
-<div class="mask">
+<div class="mask hide-mask">
+	<div></div>
 </div>
 <div id="content_warp">
 	<div class="header">

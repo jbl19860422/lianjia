@@ -30,6 +30,10 @@ img {
     background: url(../img/wait.gif) no-repeat center;
 }
 
+.hide-mask {
+    display: none;
+}
+
 .mask div {
     background: rgba(0, 0, 0, .5);
     width: 100%;

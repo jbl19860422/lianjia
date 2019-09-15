@@ -416,6 +416,14 @@
 </div>
 </body>
 <script type="text/javascript">
+	function showMask() {
+		$(".mask").show();
+	}
+
+	funcction hideMask() {
+		$(".mask").hide();
+	}
+
 	var g_page;
 	var g_host_url = "<?=HOST_URL?>";
 	String.prototype.trim = function() {    
@@ -735,7 +743,7 @@
 						showMsg('小区名称为空');
 						return;
 					}
-					
+					showMask();
 					API.invokeModuleCall(g_host_url,'cityinfo','addCommunity', {community:this.community_add,stations:this.stations}, function(json) {
 						if(json.code == 0) {
 							showMsg('添加成功！');
@@ -743,6 +751,7 @@
 						} else if(json.code == -10005) {
 							showMsg('添加失败，已经存在小区！');
 						}
+						hideMask();
 					});
 				}
 			}

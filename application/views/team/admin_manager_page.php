@@ -299,7 +299,6 @@
 					for(var j = 0; j < this.employees.length; j++) {
 						if(this.areas[i].employee_id == parseInt(this.employees[j].employee_id)) {
 							this.areas[i].employee = this.employees[j];
-							alert("alloc employee");
 							break;
 						}
 					}

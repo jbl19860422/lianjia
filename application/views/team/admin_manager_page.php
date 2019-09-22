@@ -256,6 +256,13 @@
 							if(this.employees[i].retriving_info) {
 								if(this.employees[i].retriving_info.indexOf(val) >= 0) {
 									this.filter_employees.push(this.employees[i]);
+									continue;
+								}
+							}
+
+							if(this.employees[i].name) {
+								if(this.employees[i].name.indexOf(val) >= 0) {
+									this.filter_employees.push(this.employees[i]);
 								}
 							}
 						}

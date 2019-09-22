@@ -473,7 +473,7 @@
 			}
 			
 			$employee = $_SESSION['employee'];
-			if($employee['type'] != 10) {
+			if($employee['type'] != ADMIN_TYPE_A) {
 				$ret['code'] = ERROR_UNKNOWN;
 				echo json_encode($ret);
 				return;

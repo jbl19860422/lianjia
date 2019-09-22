@@ -104,6 +104,10 @@
 		.follow-up-img {
 			cursor:pointer;
 		}
+
+		.green {
+			color:green;
+		}
 	</style>
 	
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -159,7 +163,7 @@
 						<div class="col-sm-5">
 							<div class="price"><p style="width:150px">{{house_info.price}}</p><div>
 								<p>万</p>
-								<i style="font-size:":class="{fa:true,'fa-arrow-circle-down':house_info.price_state==2,'fa-arrow-circle-up':house_info.price_state==1}"></i>
+								<i style="font-size:" :class="{green:house_info.price_state==2, fa:true,'fa-arrow-circle-down':house_info.price_state==2,'fa-arrow-circle-up':house_info.price_state==1}"></i>
 							</div>
 							</div>	
 						</div>

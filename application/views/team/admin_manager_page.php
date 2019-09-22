@@ -276,15 +276,21 @@
 					}
 					var str = /^[A-Za-z]*$/;
 					val = val.toUpperCase();
-					if (str.test(val)) {//是字母，则判断
+					// if (str.test(val)) {//是字母，则判断
 						for(var i = 0; i < this.employees.length; i++) {
 							if(this.employees[i].retriving_info) {
 								if(this.employees[i].retriving_info.indexOf(val) >= 0) {
 									this.filter_ta_employees.push(this.employees[i]);
 								}
 							}
+
+							if(this.employees[i].name) {
+								if(this.employees[i].name.indexOf(val) >= 0) {
+									this.filter_ta_employees.push(this.employees[i]);
+								}
+							}
 						}
-					}
+					// }
 				}
 			},
 			created:function() {

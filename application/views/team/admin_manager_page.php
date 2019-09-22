@@ -185,7 +185,7 @@
 			template:
 			'<div class="col-sm-12" style="margin-bottom:10px;border-bottom:1px solid #ddd;clear:both;padding-bottom:10px;">'+
 				'<div class="col-sm-4" v-html="ta.name"></div>'+
-				'<div class="col-sm-4" v-html="employee_name"></div>'+
+				'<div class="col-sm-4" v-html="ta.employee?ta.employee.name:''"></div>'+
 				'<div class="col-sm-4"><span class="btn btn-success" v-if="employee_name==\'\'" @click="showAdd()">设置</span><span class="btn btn-danger" v-if="employee_name" @click="delTaEmployee()">删除</span></div>'+
 			'</div>',
 			computed:{

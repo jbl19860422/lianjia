@@ -297,9 +297,8 @@
 			created:function() {
 				for(var i = 0; i < this.areas.length; i++) {
 					for(var j = 0; j < this.employees.length; j++) {
-						
+						console.log("aaaa = ", this.areas[i].employee_id, this.employees[j].employee_id);
 						if(this.areas[i].employee_id == this.employees[j].employee_id) {
-							console.log("aaaa = ", this.areas[i].employee_id, this.employees[j].employee_id);
 							this.areas[i].employee = this.employees[j];
 							alert("alloc employee");
 							break;

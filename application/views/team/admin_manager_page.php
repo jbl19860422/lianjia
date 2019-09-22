@@ -239,7 +239,8 @@
 				curr_area_id:function() {
 					for(var i = 0; i < this.areas.length; i++){
 						if(this.areas[i].area_id == this.curr_area_id) {
-							this.curr_area  = this.areas[i];break;
+							this.curr_area  = this.areas[i];
+							break;
 						}
 					}
 				},
@@ -298,6 +299,7 @@
 					for(var j = 0; j < this.employees.length; j++) {
 						if(this.areas[i].employee_id == this.employees[j].employee_id) {
 							this.areas[i].employee = this.employees[j];
+							alert("alloc employee");
 							break;
 						}
 					}

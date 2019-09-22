@@ -251,7 +251,7 @@
 					}
 					var str = /^[A-Za-z]*$/;
 					val = val.toUpperCase();
-					if (str.test(val)) {//是字母，则判断
+					// if (str.test(val)) {//是字母，则判断
 						for(var i = 0; i < this.employees.length; i++) {
 							if(this.employees[i].retriving_info) {
 								if(this.employees[i].retriving_info.indexOf(val) >= 0) {
@@ -266,7 +266,7 @@
 								}
 							}
 						}
-					}
+					// }
 				},
 				ta_employee_name:function(val) {
 					this.filter_ta_employees = [];

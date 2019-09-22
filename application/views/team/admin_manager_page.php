@@ -314,6 +314,7 @@
 				},
 				onAddTaAdmin:function() {
 					var that = this;
+					alert(this.curr_trade_employee.employee_id);
 					API.invokeModuleCall(g_host_url, 'team', 'setTaEmployee', {employee_id:this.curr_trade_employee.employee_id,ta_id:this.curr_ta_id}, function(json) {
 						if(json.code == 0) {
 							for(var i = 0; i < that.trade_areas.length; i++) {

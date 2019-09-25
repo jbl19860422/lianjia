@@ -1010,6 +1010,25 @@
 								<i class="fa fa-diamond"></i>
 								<p>委托人</p>
 							</li>
+
+							<li class="character" v-if="upload_agent_cert_employee">
+								<dl class="character-dl">
+									<dt>
+										<img :src="upload_agent_cert_employee.headimg"/>
+										<div class="character-div">图片人</div>
+									</dt>
+									<dd>
+										<h4 v-html="upload_agent_cert_employee.name">李翔</h4>
+										<p v-html="upload_agent_cert_employee.team_name">星海名城一组</p>
+										<p v-html="upload_agent_cert_employee.mobile">15333389765</p>
+									</dd>
+								</dl>
+							</li>
+							
+							<li class="character character1" style="cursor:pointer" v-if="!upload_agent_cert_employee">
+								<i class="fa fa-diamond"></i>
+								<p>图片人</p>
+							</li>
 						</ul>
 					</div>
 				</div>

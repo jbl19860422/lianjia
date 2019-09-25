@@ -330,8 +330,19 @@
 		</div>
 	</div>
 </div>
+<div class="mask hide-mask">
+	<div></div>
+</div>
 </body>
 <script type="text/javascript">
+	function showMask() {
+		$(".mask").show();
+	}
+
+	funcction hideMask() {
+		$(".mask").hide();
+	}
+
 	var g_page;
 	var g_host_url = "<?=HOST_URL?>";
 	String.prototype.trim = function() {    
@@ -603,11 +614,13 @@
 			methods:{
 				delFloor:function(floor) {
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house', 'delFloor', {floor:floor,bb_id:this.curr_bb_id}, function(json) {
 						if(json.code == 0) {
 							that.curr_building_block.max_floor = json.bb.max_floor;
 							that.curr_building_block.min_floor = json.bb.min_floor;
 						}
+						hideMask();
 					});
 				},
 				addUpFloor:function() {
@@ -714,6 +727,7 @@
 						return;
 					}
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house','delBuildUnit',build_unit, function(json) {
 						if(json.code == 0) {
 							for(var i = 0; i < that.building_units.length; i++) {
@@ -731,6 +745,7 @@
 							
 							showMsg('删除成功');
 						}
+						hideMask();
 					});
 				},
 				pasteBuildUnit:function(to_unit) {
@@ -745,6 +760,7 @@
 					}
 					
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house','pasteBuildUnit', {src_bu:this.copy_bu,dst_bu:to_unit}, function(json) {
 						if(json.code == 0) {
 							for(var i = that.houses.length-1;i >= 0; i--) {
@@ -755,6 +771,7 @@
 							that.houses = that.houses.concat(json.houses);
 							that.$forceUpdate();
 						}
+						hideMask();
 					});
 				},
 				pasteBB:function(to_bb) {
@@ -769,6 +786,7 @@
 					}
 					
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house', 'pasteBB', {src_bb:this.copy_bb,dst_bb:to_bb},function(json) {
 						if(json.code == 0) {
 							for(var i = 0; i < that.building_blocks.length; i++) {
@@ -793,6 +811,7 @@
 							that.houses = that.houses.concat(json.houses);
 							that.$forceUpdate();
 						}
+						hideMask();
 					});
 				},
 				pasteHouses:function(floor) {
@@ -830,6 +849,7 @@
 							return;
 						}
 					}
+					showMask();
 					this.house_add.names = names.join("|");
 					API.invokeModuleCall(g_host_url, "house", "addHouses", {house_add:this.house_add,area_id:this.curr_area_id,ta_id:this.curr_ta_id,community_id:this.curr_community_id,bb_id:this.curr_bb_id,bu_id:this.curr_bu_id}, function(json) {
 						if(json.code == 0) {
@@ -837,26 +857,32 @@
 							that.show_dlg_create_house = false;
 							showMsg("复制成功");
 						}
+						hideMask();
 					});
 				},
 				lockBB:function(bb) {
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house', 'lockBB', bb, function(json) {
 						if(json.code == 0) {
 							bb.locked = 1;
 						}
+						hideMask();
 					});
 				},
 				unlockBB:function(bb) {
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, 'house', 'unlockBB', bb, function(json) {
 						if(json.code == 0) {
 							bb.locked = 0;
 						}
+						hideMask();
 					});
 				},
 				realDelHouse:function(house) {
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, "house", "delHouse", house, function(json) {
 						if(json.code == 0) {
 							for(var i = 0; i < that.houses.length; i++) {
@@ -866,6 +892,7 @@
 								}
 							}
 						}
+						hideMask();
 						that.show_dlg_confirm_del = false;
 					});
 				},
@@ -962,6 +989,7 @@
 				},
 				delArea:function(area) {
 					var that = this;
+					showMask();
 					API.invokeModuleCall(g_host_url, "cityinfo", "delArea", {area_id:area.area_id}, function(json) {
 						if(json.code == 0) {
 							for(var i = 0;i < that.areas.length; i++) {
@@ -971,6 +999,7 @@
 							}
 							that.show_create_area_dlg = false;
 						}
+						hideMask();
 					});
 				},
 				addBulidingBlock:function() {
@@ -983,12 +1012,14 @@
 					this.building_block_add.community_id = this.curr_community_id;
 					this.building_block_add.area_id = this.curr_area_id;
 					this.building_block_add.ta_id  = this.curr_ta_id;
+					showMask();
 					API.invokeModuleCall(g_host_url, "house", "addBuildingBlock", this.building_block_add, function(json) {
 						if(json.code == 0) {
 							that.building_blocks.push(json.building_block);
 							that.show_panel = 'none';
 							that.show_dlg_create_bb = false;
 						}
+						hideMask();
 					});
 				},
 				addBulidingUnit:function() {
@@ -1006,7 +1037,7 @@
 					this.building_unit_add.ta_id = this.curr_ta_id;
 					this.building_unit_add.community_id = this.curr_community_id;
 					this.building_unit_add.bb_id = this.curr_bb_id;
-					
+					showMask();
 					API.invokeModuleCall(g_host_url, "house", "addBuildingUnit", this.building_unit_add/*{area_id:this.curr_area_id,ta_id:this.curr_ta_id,community_id:this.curr_community_id, bb_id:this.curr_bb_id,bu:this.building_unit_add}*/, function(json) {
 						if(json.code == 0) {
 							that.building_units.push(json.building_unit);
@@ -1014,6 +1045,7 @@
 							that.show_dlg_create_bu = false;
 							that.$forceUpdate();
 						}
+						hideMask();
 					});
 				},
 				addHouses:function() {
@@ -1033,12 +1065,14 @@
 					}
 					this.house_add.floor = this.curr_floor;
 					this.house_add.bu_id = this.curr_bu_id;
+					showMask();
 					API.invokeModuleCall(g_host_url, "house", "addHouses", {house_add:this.house_add,area_id:this.curr_area_id,ta_id:this.curr_ta_id,community_id:this.curr_community_id,bb_id:this.curr_bb_id,bu_id:this.curr_bu_id}, function(json) {
 						if(json.code == 0) {
 							that.houses = that.houses.concat(json.houses);
 							that.show_panel = 'none';
 							that.show_dlg_create_house = false;
 						}
+						hideMask();
 					});
 				},
 				addCommunity:function() {
@@ -1049,11 +1083,13 @@
 					}
 					
 					this.community_add.ta_id = this.curr_ta_id;
+					showMask();
 					API.invokeModuleCall(g_host_url, "house", "addCommmunity", this.community_add, function(json) {
 						if(json.code == 0) {
 							that.communities.push(json.community);
 							that.show_panel = 'none';
 						}
+						hideMask();
 					});
 				},
 				onClickAdd:function() {

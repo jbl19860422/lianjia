@@ -248,7 +248,10 @@
 			$house_prospect_employee = $this->employee_model->query_one(array('employee_id'=>$house_info['prospect_employee_id']));
 			unset($house_prospect_employee['password']);
 			$data['house_prospect_employee'] = $house_prospect_employee;
-			
+			//查询房源图片人信息
+			$house_pic_employee = $this->employee_model->query_one(array('employee_id'=>$house_info['pic_employee_id']));
+			unset($house_pic_employee['password']);
+			$data['house_pic_employee'] = $house_pic_employee;
 			
 			$data['takesees'] = [];
 			$takesee_ids = explode("|",$house_info['takesee_ids']);
@@ -1930,6 +1933,7 @@
 			$where['house_info_id'] = $_REQUEST['content']['house_info_id'];
 			$house_info['follow_imgs'] = json_encode($_REQUEST['content']['follow_imgs']);
 			$house_info['prospect_employee_id'] = $_REQUEST['from_employee_id'];
+			$house_info["pic_employee_id"]  = $_REQUEST['from_employee_id'];
 			$this->house_info_model->update($where, $house_info);
 			
 			$this->load->model('user/message_model');

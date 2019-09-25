@@ -13,7 +13,7 @@
 	<link href="https://cdn.bootcss.com/zui/1.7.0/css/zui.min.css" rel="stylesheet">
 	<link href="../../../static/public/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 	<link href="../../../static/public/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-	<link href="../../../static/css/base.css" rel="stylesheet">
+	<link href="../../../static/css/base.css?v=2" rel="stylesheet">
 	<link href="../../../static/css/city_page.css" rel="stylesheet">
 	
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

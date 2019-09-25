@@ -1025,7 +1025,7 @@
 								</dl>
 							</li>
 							
-							<li class="character character1" style="cursor:pointer" v-if="!upload_agent_cert_employee">
+							<li class="character character1" style="cursor:pointer" v-if="!house_pic_employee">
 								<i class="fa fa-image"></i>
 								<p>图片人</p>
 							</li>

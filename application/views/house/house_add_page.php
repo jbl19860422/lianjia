@@ -339,7 +339,7 @@
 		$(".mask").show();
 	}
 
-	funcction hideMask() {
+	function hideMask() {
 		$(".mask").hide();
 	}
 

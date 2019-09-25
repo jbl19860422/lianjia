@@ -1011,22 +1011,22 @@
 								<p>委托人</p>
 							</li>
 
-							<li class="character" v-if="upload_agent_cert_employee">
+							<li class="character" v-if="house_pic_employee">
 								<dl class="character-dl">
 									<dt>
-										<img :src="upload_agent_cert_employee.headimg"/>
+										<img :src="house_pic_employee.headimg"/>
 										<div class="character-div">图片人</div>
 									</dt>
 									<dd>
-										<h4 v-html="upload_agent_cert_employee.name">李翔</h4>
-										<p v-html="upload_agent_cert_employee.team_name">星海名城一组</p>
-										<p v-html="upload_agent_cert_employee.mobile">15333389765</p>
+										<h4 v-html="house_pic_employee.name">李翔</h4>
+										<p v-html="house_pic_employee.team_name">星海名城一组</p>
+										<p v-html="house_pic_employee.mobile">15333389765</p>
 									</dd>
 								</dl>
 							</li>
 							
 							<li class="character character1" style="cursor:pointer" v-if="!upload_agent_cert_employee">
-								<i class="fa fa-diamond"></i>
+								<i class="fa fa-image"></i>
 								<p>图片人</p>
 							</li>
 						</ul>
@@ -1750,6 +1750,7 @@
 				upload_taxticket_employee:<?=json_encode($upload_taxticket_employee)?>,
 				upload_verireport_employee:<?=json_encode($upload_verireport_employee)?>,
 				upload_housenumber_employee:<?=json_encode($upload_housenumber_employee)?>,
+				house_pic_employee:<?=json_encode($house_pic_employee)?>,
 				
 				house_add_employee:<?=json_encode($house_add_employee)?>,
 				house_maintain_employee:<?=json_encode($house_maintain_employee)?>,

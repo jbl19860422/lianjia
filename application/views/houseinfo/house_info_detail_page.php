@@ -2001,13 +2001,13 @@
 				if(this.house_info.veri_report) {
 					this.house_info.veri_report = JSON.parse(this.house_info.veri_report);
 				} else {
-					this.house_info.veri_report = {};
+					this.house_info.veri_report = null;
 				}
 				
 				if(this.house_info.house_number) {
 					this.house_info.house_number = JSON.parse(this.house_info.house_number);
 				} else {
-					this.house_info.house_number = {};
+					this.house_info.house_number = null;
 				}
 				
 				if(this.house_info.comments) {

@@ -1995,19 +1995,19 @@
 				if(this.house_info.deed_tax_ticket) {
 					this.house_info.deed_tax_ticket = JSON.parse(this.house_info.deed_tax_ticket);
 				} else {
-					this.house_info.deed_tax_ticket = null;
+					this.house_info.deed_tax_ticket = {};
 				}
 				
 				if(this.house_info.veri_report) {
 					this.house_info.veri_report = JSON.parse(this.house_info.veri_report);
 				} else {
-					this.house_info.veri_report = null;
+					this.house_info.veri_report = {};
 				}
 				
 				if(this.house_info.house_number) {
 					this.house_info.house_number = JSON.parse(this.house_info.house_number);
 				} else {
-					this.house_info.house_number = null;
+					this.house_info.house_number = {};
 				}
 				
 				if(this.house_info.comments) {

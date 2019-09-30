@@ -1496,7 +1496,7 @@
 			<div class="" style="height:auto;text-align:center;">
 				<label style="font-size:2rem">认证房源编号</label>
 			</div>
-			<div class="" style="margin-top:10px;text-align:left;">
+			<div class="" style="margin-top:10px;text-align:left;" v-if="house_info.house_number">
 				<label>房源编号：</label>
 				<span class="form-control" style="width:auto;display:inline" editable=false v-html="house_info.house_number.number"></span>
 			</div>

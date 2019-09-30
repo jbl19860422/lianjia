@@ -1459,7 +1459,7 @@
 				<label style="font-size:2rem">房屋核验报告</label>
 			</div>
 			<div class="" style="margin-top:10px;text-align:center;">
-				<img :src="house_info.veri_report.report_img" style="width:120px;cursor:pointer;"></img>
+				<img v-if="house_info.veri_report" :src="house_info.veri_report.report_img" style="width:120px;cursor:pointer;"></img>
 			</div>
 			<div style="margin-top:20px">
 				<div style="display:flex">

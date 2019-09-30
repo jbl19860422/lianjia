@@ -638,7 +638,7 @@
 								<div class="col-sm-4 description-r" v-if="house_info.has_agent_cert==1">{{upload_agent_cert_employee.name}}（维护人）-{{upload_agent_cert_employee.team_name}}-{{upload_agent_cert_employee.mobile}}</div>
 								<div class="col-sm-5 description-z" v-if="house_info.has_agent_cert==0"></div>
 								<div class="col-sm-4 description-r" v-if="house_info.has_agent_cert==0"></div>
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_agent_cert=true;">修改</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_agent_cert=true;" v-html="house_info.has_agent_cert==1?'修改':'上传'">修改</div>
 							</div>
 							<div class="col-sm-12 follow-up-li">
 								<label class="col-sm-2 description-z" style="cursor:pointer" @click="if(house_info.has_contract) show_dlg_contract=true">原始购房合同</label>
@@ -652,7 +652,7 @@
 								<div class="col-sm-4 description-r" v-if="house_info.upload_idpaper_employee">{{upload_idpaper_employee.name}}（维护人）-{{upload_idpaper_employee.team_name}}-{{upload_idpaper_employee.mobile}}</div>
 								<div class="col-sm-5 description-z" v-if="!house_info.upload_idpaper_employee"></div>
 								<div class="col-sm-4 description-r" v-if="!house_info.upload_idpaper_employee"></div>
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_idpaper=true">修改</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_idpaper=true" v-html="house_info.upload_idpaper_employee?'修改':'上传'">修改</div>
 							</div>
 							
 							<div class="col-sm-12 follow-up-li">
@@ -661,7 +661,7 @@
 								<div class="col-sm-4 description-r" v-if="upload_taxticket_employee">{{upload_taxticket_employee.name}}（维护人）-{{upload_taxticket_employee.team_name}}-{{upload_taxticket_employee.mobile}}</div>
 								<div class="col-sm-5 description-z" v-if="!house_info.deed_tax_ticket"></div>
 								<div class="col-sm-4 description-r" v-if="!upload_taxticket_employee"></div>
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_taxticket=true">上传</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_taxticket=true" v-html="house_info.deed_tax_ticket?'修改':'上传'">上传</div>
 							</div>
 							
 							<div class="col-sm-12 follow-up-li">
@@ -672,7 +672,7 @@
 								<div class="col-sm-5 description-z" v-if="!house_info.veri_report"></div>
 								<div class="col-sm-4 description-r" v-if="!upload_verireport_employee"></div>
 								
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_veri_report=true">上传</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_veri_report=true" v-html="house_info.veri_report?'修改':'上传'">上传</div>
 							</div>
 							<div class="col-sm-12 follow-up-li">
 								<label class="col-sm-2 description-z" style="cursor:pointer" @click="show_dlg_house_number=true">认证房源编号</label>
@@ -682,7 +682,7 @@
 								<div class="col-sm-5 description-z" v-if="!house_info.house_number"></div>
 								<div class="col-sm-4 description-r" v-if="!upload_housenumber_employee"></div>
 								
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_house_number=true">修改</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_house_number=true" v-html="house_info.house_number?'修改':'上传'">修改</div>
 							</div>
 						
 						</div>

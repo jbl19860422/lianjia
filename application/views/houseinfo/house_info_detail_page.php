@@ -629,7 +629,7 @@
 								<div class="col-sm-4 description-r" v-if="house_info.has_cert==1">{{upload_cert_employee.name}}（维护人）-{{upload_cert_employee.team_name}}-{{upload_cert_employee.mobile}}</div>
 								<div class="col-sm-5 description-z" v-if="house_info.has_cert==0"></div>
 								<div class="col-sm-4 description-r" v-if="house_info.has_cert==0"></div>
-								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_house_cert=true">修改</div>
+								<div class="col-sm-1 text-center description-x" @click="show_dlg_upload_house_cert=true" v-html="house_info.has_cert?'修改':'上传'">修改</div>
 							</div>
 							
 							<div class="col-sm-12 follow-up-li">

@@ -1995,7 +1995,7 @@
 				if(this.house_info.deed_tax_ticket) {
 					this.house_info.deed_tax_ticket = JSON.parse(this.house_info.deed_tax_ticket);
 				} else {
-					this.house_info.deed_tax_ticket = {};
+					this.house_info.deed_tax_ticket = null;
 				}
 				
 				if(this.house_info.veri_report) {

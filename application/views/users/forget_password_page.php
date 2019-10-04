@@ -72,11 +72,21 @@
 					mobile:'',
 					checkcode:'',
 					password1:'',
-					password2:''
+					password2:'',
+					sessionId:$.cookie('sessionId')
 				}
 	    	}
 	  	},
 		methods: {
+			sendRegisterCheckCode:function() {
+				var that = this;
+				API.invokeModuleCall(g_host_url, 'user', 'sendRegisterCheckCode',this.user, function(json) {
+					if(json.code == 0) {
+						that.user.sessionId = json.sessionId;
+						$.cookie('sessionId',json.sessionId);
+					}
+				});
+			},
 		    login: function () {
 				if(!this.password1){
 					this.msg = "密码不能为空";

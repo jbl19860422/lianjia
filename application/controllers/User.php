@@ -100,6 +100,29 @@
 			$ret['code'] = 0;
 			echo json_encode($ret);
 		}
+
+		public function resetPassword() {
+			session_start();
+			$user['password'] = md5($_REQUEST['password1']);
+			$user['mobile'] = $_REQUEST['mobile'];
+			//校验验证码
+			$this->load->library('rongcloudapi');
+			$checkcode = $_REQUEST['checkcode'];
+			$sessionId = $_REQUEST['sessionId'];
+			$res = $this->rongcloudapi->verify_code($sessionId, $checkcode);
+			if(!$res) {
+				$ret['checkcode'] = $checkcode;
+				$ret['sessionId'] = $sessionId;
+				$ret['code'] = ERROR_VERIFY_FAILED;//校验失败
+				echo json_encode($ret);
+				return; 
+			}
+
+			$this->load->model('user/employee_model');
+			$this->employee_model->update(array('mobile'=>$user['mobile']), $user);
+			$ret['code'] = 0;
+			echo json_encode($ret);
+		}
 		
 		public function registerUser() {
 			session_start();

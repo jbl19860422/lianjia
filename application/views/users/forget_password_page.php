@@ -54,7 +54,7 @@
 				<p class="col-sm-10 col-sm-offset-1">{{msg}}</p>
 				<div class="form-group">
 				    <div class="col-sm-offset-1 col-sm-10">
-				      <div class="login_btn" @click="login">确认修改</div>
+				      <div class="login_btn" @click="resetPassword()">确认修改</div>
 				    </div>
 			  	</div>
 			</div>
@@ -87,7 +87,7 @@
 					}
 				});
 			},
-		    login: function () {
+		    resetPassword: function () {
 				if(!this.password1){
 					this.msg = "密码不能为空";
 					return;
@@ -99,7 +99,7 @@
 				}
 				
 				var that = this;
-				API.invokeModuleCall(g_host_url,'user','modifyPassword', {new_password:this.new_password},function(json) {
+				API.invokeModuleCall(g_host_url,'user','resetPassword', this.user,function(json) {
 					if(json.code == 0) {
 						alert('修改成功');
 						history.back(-1);

@@ -42,9 +42,9 @@
 				      <div class="login_btn" @click="login">登入</div>
 				    </div>
 			  	</div>
-			  	<!--<div class="col-sm-10 col-sm-offset-1">
+			  	<div class="col-sm-10 col-sm-offset-1">
 			  		<a href="#" class="forget">忘记密码？</a>
-			  	</div>-->
+			  	</div>
 			</div>
 		</form>
 	</div>

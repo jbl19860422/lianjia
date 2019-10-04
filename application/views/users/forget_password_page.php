@@ -103,6 +103,8 @@
 					if(json.code == 0) {
 						alert('修改成功');
 						history.back(-1);
+					} else if(json.code == -5003) {
+						this.msg = "验证码错误";
 					}
 				});
 		    }

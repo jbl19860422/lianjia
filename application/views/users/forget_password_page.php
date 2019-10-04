@@ -23,8 +23,23 @@
 		<h3> </h3>
 		<form class="form-horizontal">
 			<div class="row" id="row">
-				<div class="title">修改密码</div>
-			  	<div class="form-group">
+				<div class="title">忘记密码</div>
+				<div class="form-group">
+				   	<label class="col-sm-5 col-sm-offset-1 login_label">手机号</label>
+				    <div class="col-sm-10 col-sm-offset-1">
+				    	<input type="text" class="form-control" placeholder="请输入正确手机号" v-model = "user.mobile">
+				    </div>
+				</div>
+				<div class="form-group">
+				   	<label class="col-sm-5 col-sm-offset-1 login_label">短信验证码</label>
+				    <div class="col-sm-6 col-sm-offset-1">
+				    	<input type="text" class="form-control" placeholder="请输入短信验证码" v-model="user.checkcode">
+				    </div>
+				    <div class="col-sm-4">
+				    	<a class="btn btn-default" role="button" @click="sendRegisterCheckCode()">获取验证码</a>
+				    </div>
+				</div>
+				<div class="form-group">
 				    <label class="col-sm-3 col-sm-offset-1 login_label">新密码</label>
 				    <div class="col-sm-10 col-sm-offset-1">
 				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="new_password" @keyup.enter="login">
@@ -42,9 +57,6 @@
 				      <div class="login_btn" @click="login">确认修改</div>
 				    </div>
 			  	</div>
-			  	<!--<div class="col-sm-10 col-sm-offset-1">
-			  		<a href="#" class="forget">忘记密码？</a>
-			  	</div>-->
 			</div>
 		</form>
 	</div>
@@ -56,8 +68,12 @@
 		data:function() {
 	    	return {
 	    		msg:'',/*提示信息*/
-				new_password:'',
-				new_password1:''
+				user:{
+					mobile:'',
+					checkcode:'',
+					password1:'',
+					password2:''
+				}
 	    	}
 	  	},
 		methods: {

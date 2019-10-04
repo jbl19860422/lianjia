@@ -23,6 +23,10 @@
 			$this->load->view('users/modify_password_page');
 		}
 
+		public function forget_password_page() {
+			$this->load->view('users/forget_password_page');
+		}
+
 		public function user_modify_page() {
 			session_start();
 			if(!isset($_SESSION['employee'])) {

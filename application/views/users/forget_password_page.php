@@ -20,31 +20,31 @@
 </head>
 <body>
 	<div class="login">
-		<h3>logo</h3>
+		<h3> </h3>
 		<form class="form-horizontal">
 			<div class="row" id="row">
-				<div class="title">用户登入<h5>还没有账号？<a href="user/register_page">马上注册</a></h5></div>
-				<div class="form-group">
-				    <label class="col-sm-3 col-sm-offset-1 login_label">账号</label>
+				<div class="title">修改密码</div>
+			  	<div class="form-group">
+				    <label class="col-sm-3 col-sm-offset-1 login_label">新密码</label>
 				    <div class="col-sm-10 col-sm-offset-1">
-				    	<input type="text" class="form-control" placeholder="请输入正确账号" v-model="user.mobile">
+				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="new_password" @keyup.enter="login">
 				    </div>
 				</div>
-			  	<div class="form-group">
-				    <label class="col-sm-3 col-sm-offset-1 login_label">密码</label>
+				<div class="form-group">
+				    <label class="col-sm-3 col-sm-offset-1 login_label" style="width:auto">确认新密码</label>
 				    <div class="col-sm-10 col-sm-offset-1">
-				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="user.password" @keyup.enter="login">
+				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="new_password1" @keyup.enter="login">
 				    </div>
 				</div>
 				<p class="col-sm-10 col-sm-offset-1">{{msg}}</p>
 				<div class="form-group">
 				    <div class="col-sm-offset-1 col-sm-10">
-				      <div class="login_btn" @click="login">登入</div>
+				      <div class="login_btn" @click="login">确认修改</div>
 				    </div>
 			  	</div>
-			  	<div class="col-sm-10 col-sm-offset-1">
-			  		<a href="user/forget_password_page" class="forget">忘记密码？</a>
-			  	</div>
+			  	<!--<div class="col-sm-10 col-sm-offset-1">
+			  		<a href="#" class="forget">忘记密码？</a>
+			  	</div>-->
 			</div>
 		</form>
 	</div>
@@ -56,33 +56,27 @@
 		data:function() {
 	    	return {
 	    		msg:'',/*提示信息*/
-				user:{
-					mobile:'',
-					password:''
-				}
+				new_password:'',
+				new_password1:''
 	    	}
 	  	},
 		methods: {
 		    login: function () {
-		      	if(!this.user.mobile){
-					this.msg = "手机号不能为空";
-					return;
-				};
-				if(!this.user.password){
+				if(!this.new_password){
 					this.msg = "密码不能为空";
 					return;
 				};
 				
+				if(this.new_password != this.new_password1) {
+					this.msg = "两次密码不一致";
+					return;
+				}
+				
 				var that = this;
-				API.invokeModuleCall(g_host_url,'user','loginUser', this.user,function(json) {
+				API.invokeModuleCall(g_host_url,'user','modifyPassword', {new_password:this.new_password},function(json) {
 					if(json.code == 0) {
-						$.cookie('curr_province_id',json.province_id);
-						$.cookie('curr_city_id',json.city_id);
-						location.href = "<?=HOST_URL?>/houseinfo/house_info_list_page";
-					} else if(json.code == -1009) {
-						that.msg = '手机或密码不正确';
-					} else if(json.code == -1012) {
-						that.msg = '请等待审核通过';
+						alert('修改成功');
+						history.back(-1);
 					}
 				});
 		    }

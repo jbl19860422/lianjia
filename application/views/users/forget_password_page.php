@@ -42,13 +42,13 @@
 				<div class="form-group">
 				    <label class="col-sm-3 col-sm-offset-1 login_label">新密码</label>
 				    <div class="col-sm-10 col-sm-offset-1">
-				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="new_password" @keyup.enter="login">
+				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="user.password1" @keyup.enter="login">
 				    </div>
 				</div>
 				<div class="form-group">
 				    <label class="col-sm-3 col-sm-offset-1 login_label" style="width:auto">确认新密码</label>
 				    <div class="col-sm-10 col-sm-offset-1">
-				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="new_password1" @keyup.enter="login">
+				    	<input type="password" class="form-control" placeholder="请输入正确密码" v-model="user.password2" @keyup.enter="login">
 				    </div>
 				</div>
 				<p class="col-sm-10 col-sm-offset-1">{{msg}}</p>
@@ -72,18 +72,18 @@
 					mobile:'',
 					checkcode:'',
 					password1:'',
-					new_password:''
+					password2:''
 				}
 	    	}
 	  	},
 		methods: {
 		    login: function () {
-				if(!this.new_password){
+				if(!this.password1){
 					this.msg = "密码不能为空";
 					return;
 				};
 				
-				if(this.new_password != this.new_password1) {
+				if(this.password1 != this.password2) {
 					this.msg = "两次密码不一致";
 					return;
 				}

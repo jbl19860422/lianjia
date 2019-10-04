@@ -72,7 +72,7 @@
 					mobile:'',
 					checkcode:'',
 					password1:'',
-					password2:''
+					new_password:''
 				}
 	    	}
 	  	},

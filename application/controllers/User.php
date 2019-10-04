@@ -652,12 +652,36 @@
 				return;
 			}
 			
-			//echo 'sessionId='.$sessionId;
-//			$checkcode_rec['mobile'] = $mobile;
-//			$checkcode_rec['sessionId'] = $data_json['sessionId'];
-//			$checkcode_rec['create_time'] = time();
-//			$checkcode_rec['type'] = $type;
-//			$this->checkcode_model->insert($checkcode_rec);
+			$ret['code'] = 0;
+			$ret['sessionId'] = $data_json['sessionId'];
+			echo json_encode($ret);
+		}
+
+		public function sendForgetPwdCheckCode() {
+			if(!isset($_REQUEST['mobile'])) {
+				$ret['code'] = ERROR_PARAM;
+				echo json_encode($ret);
+				return;
+			}
+			
+			$mobile = $_REQUEST['mobile'];
+			$region = "86";
+			$ip = $_SERVER['REMOTE_ADDR'];
+			
+			$templateId = $this->config->item('REGISTER_TEMP_ID');
+			$this->load->library('rongcloudapi');
+			$sJson = $this->rongcloudapi->send_checkcode($mobile, $templateId, $region);
+			$data_json = json_decode($sJson, true);
+			if($data_json['code'] == 1008) {
+				$ret['code'] = ERROR_SEND_CHECKCODE_TOOOFTEN;
+				echo json_encode($ret);
+				return;
+			} else if($data_json['code'] != 200) {
+				$ret['code'] = ERROR_UNKNOWN_ERROR;
+				echo json_encode($ret);
+				return;
+			}
+			
 			$ret['code'] = 0;
 			$ret['sessionId'] = $data_json['sessionId'];
 			echo json_encode($ret);

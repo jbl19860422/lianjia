@@ -36,7 +36,7 @@
 				    	<input type="text" class="form-control" placeholder="请输入短信验证码" v-model="user.checkcode">
 				    </div>
 				    <div class="col-sm-4">
-				    	<a class="btn btn-default" role="button" @click="sendRegisterCheckCode()">获取验证码</a>
+				    	<a class="btn btn-default" role="button" @click="sendForgetPwdCheckCode()">获取验证码</a>
 				    </div>
 				</div>
 				<div class="form-group">
@@ -78,9 +78,9 @@
 	    	}
 	  	},
 		methods: {
-			sendRegisterCheckCode:function() {
+			sendForgetPwdCheckCode:function() {
 				var that = this;
-				API.invokeModuleCall(g_host_url, 'user', 'sendRegisterCheckCode',this.user, function(json) {
+				API.invokeModuleCall(g_host_url, 'user', 'sendForgetPwdCheckCode',this.user, function(json) {
 					if(json.code == 0) {
 						that.user.sessionId = json.sessionId;
 						$.cookie('sessionId',json.sessionId);

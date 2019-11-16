@@ -26,7 +26,7 @@
 	<script src="static/js/api.js?v=1"></script>
 	<script src="http://api.map.baidu.com/api?v=2.0&ak=zjc67Z4sk9azp0cEBBTGBSknA1x7OPyR" type="text/javascript"></script>
 	<script src="//cdn.bootcss.com/plupload/2.3.1/moxie.min.js"></script>
-	<script src="http://otf974inp.bkt.clouddn.com/plupload.full.min.js"></script>
+	<script src="https://cdn.bootcss.com/plupload/2.1.0/plupload.full.min.js"></script>
 	<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.min.js"></script>
 	<script src="https://cdn.bootcss.com/labjs/2.0.3/LAB.min.js"></script>
 	

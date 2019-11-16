@@ -212,14 +212,14 @@
 	<script src="static/js/api.js?v=1"></script>
 	<script src="http://api.map.baidu.com/api?v=2.0&ak=zjc67Z4sk9azp0cEBBTGBSknA1x7OPyR" type="text/javascript"></script>
 	<script src="//cdn.bootcss.com/plupload/2.3.1/moxie.min.js"></script>
-	<script src="http://otf974inp.bkt.clouddn.com/plupload.full.min.js"></script>
+	<script src="https://cdn.bootcss.com/plupload/2.1.0/plupload.full.min.js"></script>
 	<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.min.js"></script>
 </head>
 <body>
 <div id="content_warp">
 	<div class="header">
 		<div class="bar mg-c">
-			<?php $menu='·¿Ô´';?>
+			<?php $menu='ï¿½ï¿½Ô´';?>
 			<?php include dirname(__file__)."/../inc/menu.php"?>
 			<div class="user-info">
 			</div>
@@ -227,31 +227,31 @@
 	</div>
 	<div class="submenu">
 		<ul class="cityinfo-menus">
-			<li><a href="cityinfo/city_page">·¿Ô´ÁÐ±í</a></li>
-			<li class="active"><a href="javascript:">Ìí¼Ó·¿Ô´</a></li>
-			<!--<li><a href="cityinfo/school_page">´ýÉóºË·¿Ô´</a></li>-->
+			<li><a href="cityinfo/city_page">ï¿½ï¿½Ô´ï¿½Ð±ï¿½</a></li>
+			<li class="active"><a href="javascript:">ï¿½ï¿½ï¿½Ó·ï¿½Ô´</a></li>
+			<!--<li><a href="cityinfo/school_page">ï¿½ï¿½ï¿½ï¿½Ë·ï¿½Ô´</a></li>-->
 		</ul>
 	</div>
 	<div class="mg-c" style="height:45px;line-height:45px;">
 		<ul class="breadcrumb">
 			<li>
-				µ±Ç°Î»ÖÃ£º
+				ï¿½ï¿½Ç°Î»ï¿½Ã£ï¿½
 			</li>
 			<li>
-				·¿Ô´¿â¹ÜÀí-Ìí¼Ó·¿Ô´
+				ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½Ó·ï¿½Ô´
 			</li>
 		</ul>
 	</div>
 	<div class="mg-c">
 	<div class="content1">
 		<div class="row">
-			<div class="fl-l">Ê¡·ÝÑ¡Ôñ£º</div>
+			<div class="fl-l">Ê¡ï¿½ï¿½Ñ¡ï¿½ï¿½</div>
 			<div class="fl-l" style="margin-left:10px">
 				<select v-model="curr_province_id">
 					<option v-for="province in provinces" v-html="province.name" :value="province.province_id"></option>
 				</select>
 			</div>
-			<div class="fl-l">³ÇÊÐÑ¡Ôñ£º</div>
+			<div class="fl-l">ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½</div>
 			<div class="fl-l" style="margin-left:10px">
 				<select v-model="curr_city_id">
 					<option v-for="city in cities" v-html="city.name" :value="city.city_id" v-if="city.province_id==curr_province_id"></option>
@@ -261,42 +261,42 @@
 		</div>
 	</div>
 	<div style="height:45px;line-height:45px;font-size:1.5rem;color:#999">
-		Ìí¼Ó·¿Ô´
+		ï¿½ï¿½ï¿½Ó·ï¿½Ô´
 	</div>
 	<div class="content2">
 		<div class="row mg-top-20">
 			<div class="fl-l" style="width:49%;height:100%;position:relative;">
 				<div style="margin-top:20px">
-					<span>Ð¡Çø:</span>
+					<span>Ð¡ï¿½ï¿½:</span>
 					<select v-model="curr_community_id">
 						<option v-for="community in communities" v-if="community.ta_id == curr_ta_id" :value="community.community_id" v-html="community.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_community')">´´½¨Ð¡Çø</span>
+					<span class="btn" @click="showPanel('add_community')">ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>¶°×ù:</span>
+					<span>ï¿½ï¿½ï¿½ï¿½:</span>
 					<select v-model="curr_bb_id">
 						<option v-for="building_block in building_blocks" v-if="building_block.community_id == curr_community_id" :value="building_block.bb_id" v-html="building_block.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_building_block')">´´½¨¶°×ù</span>
+					<span class="btn" @click="showPanel('add_building_block')">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>µ¥Ôª:</span>
+					<span>ï¿½ï¿½Ôª:</span>
 					<select v-model="curr_bu_id">
 						<option v-for="building_unit in building_units" v-if="building_unit.bb_id == curr_bb_id" :value="building_unit.bu_id" v-html="building_unit.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_building_unit')">´´½¨µ¥Ôª</span>
+					<span class="btn" @click="showPanel('add_building_unit')">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôª</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>Â¥²ã:</span>
+					<span>Â¥ï¿½ï¿½:</span>
 					<select v-model="curr_floor">
 						<option v-for="floor in floors" :value="floor" v-html="floor"></option>
 					</select>
 				</div>
 				<div style="margin-top:20px">
-					<span>ÃÅÅÆ:</span>
-					<input type="text" placeholder="ÇëÊäÈëÃÅÅÆ£¬¶à¸öÃÅÅÆÓÃ|·Ö¸ô" v-model="house_add.names"></input>
-					<span class="btn" @click="addHouses()">´´½¨ÃÅÅÆ</span>
+					<span>ï¿½ï¿½ï¿½ï¿½:</span>
+					<input type="text" placeholder="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½Ö¸ï¿½" v-model="house_add.names"></input>
+					<span class="btn" @click="addHouses()">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span>
 				</div>
 				<div style="margin-top:20px" class="house-list">
 					<div v-for="house in houses" v-if="house.floor==curr_floor&&house.bu_id==curr_bu_id" class="btn fl-l" style="position:relative;margin-left:30px;margin-bottom:10px;">
@@ -308,35 +308,35 @@
 			</div>
 			<div class="fl-l" style="width:49%;height:100%;position:relative;">
 				<div class="create_community" v-show="show_panel=='add_community'">
-					<p><span>Ð¡ÇøÃû³Æ£º</span><input type="text" v-model="community_add.name"></input><span class="btn" @click="resolvePos()">µØÍ¼¶¨Î»</span></p>
+					<p><span>Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½</span><input type="text" v-model="community_add.name"></input><span class="btn" @click="resolvePos()">ï¿½ï¿½Í¼ï¿½ï¿½Î»</span></p>
 					<div id="map-community" style="width:200px;height:150px"></div>
 					<p>
-						<span>ÊÖ¶¯ÊäÈë£º</span>
-						<span>¾­¶È£º</span><input type="text" v-model="community_add.lat"></input>
-						<span>Î³¶È£º</span><input type="text" v-model="community_add.lng"></input>
+						<span>ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ë£º</span>
+						<span>ï¿½ï¿½ï¿½È£ï¿½</span><input type="text" v-model="community_add.lat"></input>
+						<span>Î³ï¿½È£ï¿½</span><input type="text" v-model="community_add.lng"></input>
 					</p>
 					<p>
-						<span>¼ìË÷ÐÅÏ¢£º</span><input type="text" v-model="community_add.retriving_info">
+						<span>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½</span><input type="text" v-model="community_add.retriving_info">
 					</p>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addCommunity()">È·ÈÏÌí¼Ó</span>
+						<span class="btn" style="margin-top:50px" @click="addCommunity()">È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span>
 					</p>
 				</div>
 				
 				<div class="create_bb" v-show="show_panel=='add_building_block'">
-					<p><span>¶°×ùÃû³Æ£º</span><input type="text" v-model="building_block_add.name"></input></p>
-					<p><span>×î¸ßÂ¥²ã£º</span><input type="text" v-model="building_block_add.max_floor"></input>
-					<p><span>×îµÍÂ¥²ã£º</span><input type="text" v-model="building_block_add.min_floor"></input>
+					<p><span>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½</span><input type="text" v-model="building_block_add.name"></input></p>
+					<p><span>ï¿½ï¿½ï¿½Â¥ï¿½ã£º</span><input type="text" v-model="building_block_add.max_floor"></input>
+					<p><span>ï¿½ï¿½ï¿½Â¥ï¿½ã£º</span><input type="text" v-model="building_block_add.min_floor"></input>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addBulidingBlock()">È·ÈÏÌí¼Ó</span>
+						<span class="btn" style="margin-top:50px" @click="addBulidingBlock()">È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span>
 					</p>
 				</div>
 				
 				<div class="create_bu" v-show="show_panel=='add_building_unit'">
-					<p><span>µ¥ÔªÃû³Æ£º</span><input type="text" v-model="building_unit_add.names"></input></p>
-					<p><span>ÊÇ·ñµçÌÝ£º</span><input type="check" v-model="building_unit_add.lift"></input></p>
+					<p><span>ï¿½ï¿½Ôªï¿½ï¿½ï¿½Æ£ï¿½</span><input type="text" v-model="building_unit_add.names"></input></p>
+					<p><span>ï¿½Ç·ï¿½ï¿½ï¿½Ý£ï¿½</span><input type="check" v-model="building_unit_add.lift"></input></p>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addBulidingUnit()">È·ÈÏÌí¼Ó</span>
+						<span class="btn" style="margin-top:50px" @click="addBulidingUnit()">È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span>
 					</p>
 				</div>
 			</div>
@@ -470,18 +470,18 @@
 				this.map.enableScrollWheelZoom(true);
 				this.map.disable3DBuilding();
 				console.log(this.map);
-				// ´´½¨µØÖ·½âÎöÆ÷ÊµÀý
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 				this.myGeo = new BMap.Geocoder();
-				// ½«µØÖ·½âÎö½á¹ûÏÔÊ¾ÔÚµØÍ¼ÉÏ,²¢µ÷ÕûµØÍ¼ÊÓÒ°
+				// ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Úµï¿½Í¼ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ò°
 				this.myGeo.getPoint(this.community_add.name, function(point){
 					if (point) {
 						console.log(point);
 						that.map.centerAndZoom(point, 18);
 						that.map.addOverlay(new BMap.Marker(point));
 					}else{
-						alert("ÄúÑ¡ÔñµØÖ·Ã»ÓÐ½âÎöµ½½á¹û!");
+						alert("ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ö·Ã»ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!");
 					}
-				}, "±±¾©ÊÐ");
+				}, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			},
 			watch:{
 				curr_province_id:function(val,old_val) {
@@ -511,7 +511,7 @@
 					}
 					var that = this;
 					that.curr_bu_id = -1;
-					if($.inArray(val, this.loaded_build_blocks) < 0) {//²»´æÔÚ£¬Ôò¼ÓÔØÕâ¸öÆ¬ÇøµÄÐ¡Çø¼°¶°×ùÐÅÏ¢
+					if($.inArray(val, this.loaded_build_blocks) < 0) {//ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 						API.invokeModuleCall(g_host_url,'house','queryBuildingUnits', {bb_id:val}, function(json) {
 							if(json.code == 0) {
 								that.loaded_build_blocks.push(val);
@@ -564,7 +564,7 @@
 				curr_ta_id:function(val) {
 					var that = this;
 					that.curr_community_id = -1;
-					if($.inArray(val, this.loaded_trade_areas) < 0) {//²»´æÔÚ£¬Ôò¼ÓÔØÕâ¸öÆ¬ÇøµÄÐ¡Çø¼°¶°×ùÐÅÏ¢
+					if($.inArray(val, this.loaded_trade_areas) < 0) {//ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 						API.invokeModuleCall(g_host_url,'house','queryAreaCommunities', {ta_id:val}, function(json) {
 							if(json.code == 0) {
 								that.loaded_trade_areas.push(val);
@@ -626,19 +626,19 @@
 							that.map.centerAndZoom(point, 18);
 							that.map.addOverlay(new BMap.Marker(point));
 						}else{
-							alert("ÄúÑ¡ÔñµØÖ·Ã»ÓÐ½âÎöµ½½á¹û!");
+							alert("ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ö·Ã»ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!");
 						}
-					}, "±±¾©ÊÐ");
+					}, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				},
 				showPanel:function(val) {
 					if(val == "add_community") {
 						if(!this.curr_ta_id || this.curr_ta_id == 0) {
-							alert('ÇëÑ¡ÔñÉÌÈ¦');
+							alert('ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½È¦');
 							return;
 						}
 					} else if(val == 'add_building_block') {
 						if(!this.curr_community_id || this.curr_community_id == 0) {
-							alert('ÇëÑ¡ÔñÐ¡Çø');
+							alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Ð¡ï¿½ï¿½');
 							return;
 						}
 					}
@@ -646,7 +646,7 @@
 				},
 				showCreateAreaDlg:function() {
 					if(this.curr_city_id == 0) {
-						alert('ÇëÑ¡Ôñ³ÇÊÐ');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½');
 						return;
 					}
 					this.show_create_area_dlg = true;
@@ -670,7 +670,7 @@
 				addBulidingBlock:function() {
 					var that = this;
 					if(!this.curr_community_id || this.curr_community_id == 0) {
-						alert('ÇëÑ¡ÔñÐ¡Çø');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Ð¡ï¿½ï¿½');
 						return;
 					}
 					
@@ -685,7 +685,7 @@
 				addBulidingUnit:function() {
 					var that = this;
 					if(!this.curr_bb_id || this.curr_bb_id == 0) {
-						alert('ÇëÑ¡Ôñ¶°×ù');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½');
 						return;
 					}
 					
@@ -700,16 +700,16 @@
 				addHouses:function() {
 					var that = this;
 					if(this.curr_bb_id <= 0) {
-						alert('ÇëÑ¡Ôñ¶°×ù');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½');
 						return;
 					}
 					if(!this.curr_bu_id || this.curr_bu_id <= 0) {
-						alert('ÇëÑ¡Ôñµ¥Ôª');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Ôª');
 						return;
 					}
 					
 					if(this.curr_floor <= -10) {
-						alert('ÇëÊäÈëÂ¥²ã');
+						alert('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¥ï¿½ï¿½');
 						return;
 					}
 					this.house_add.floor = this.curr_floor;
@@ -724,7 +724,7 @@
 				addCommunity:function() {
 					var that = this;
 					if(this.curr_ta_id == 0) {
-						alert('ÇëÑ¡ÔñÉÌÈ¦');
+						alert('ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½È¦');
 						return;
 					}
 					

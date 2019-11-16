@@ -19,7 +19,7 @@
 	
 	<script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
 	<script src="static/js/api.js?v=1"></script>
-	<script src="http://otf974inp.bkt.clouddn.com/plupload.full.min.js"></script>
+	<script src="https://cdn.bootcss.com/plupload/2.1.0/plupload.full.min.js"></script>
 	<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.min.js"></script>
 </head>
 <body>

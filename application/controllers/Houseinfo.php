@@ -56,9 +56,7 @@
 		public function house_info_list_page() {
 			session_start();
 			if(!isset($_SESSION['employee'])) {
-				echo "not login";
-				return;
-				header("location: user/login_page");
+				header("location: /user/login_page");
 				return;
 			}
 			$data['employee'] = $_SESSION['employee'];

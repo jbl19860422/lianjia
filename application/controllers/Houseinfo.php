@@ -3192,7 +3192,6 @@
 			$houseinfo['owner'] = json_encode($_REQUEST['owner']);
 			$houseinfo['contacts'] = json_encode($_REQUEST['contacts']);
 			
-			
 			$this->load->model('house/community_station_model');
 			$cs = $this->community_station_model->query_one(array('community_id'=>$houseinfo['community_id']));
 			if($cs) {

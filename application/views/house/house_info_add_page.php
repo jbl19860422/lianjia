@@ -219,7 +219,7 @@
 <div id="content_warp">
 	<div class="header">
 		<div class="bar mg-c">
-			<?php $menu='��Դ';?>
+			<?php $menu='???';?>
 			<?php include dirname(__file__)."/../inc/menu.php"?>
 			<div class="user-info">
 			</div>
@@ -227,31 +227,31 @@
 	</div>
 	<div class="submenu">
 		<ul class="cityinfo-menus">
-			<li><a href="cityinfo/city_page">��Դ�б�</a></li>
-			<li class="active"><a href="javascript:">���ӷ�Դ</a></li>
-			<!--<li><a href="cityinfo/school_page">����˷�Դ</a></li>-->
+			<li><a href="cityinfo/city_page">????��?</a></li>
+			<li class="active"><a href="javascript:">??????</a></li>
+			<!--<li><a href="cityinfo/school_page">???????</a></li>-->
 		</ul>
 	</div>
 	<div class="mg-c" style="height:45px;line-height:45px;">
 		<ul class="breadcrumb">
 			<li>
-				��ǰλ�ã�
+				???��???
 			</li>
 			<li>
-				��Դ�����-���ӷ�Դ
+				????????-??????
 			</li>
 		</ul>
 	</div>
 	<div class="mg-c">
 	<div class="content1">
 		<div class="row">
-			<div class="fl-l">ʡ��ѡ��</div>
+			<div class="fl-l">??????</div>
 			<div class="fl-l" style="margin-left:10px">
 				<select v-model="curr_province_id">
 					<option v-for="province in provinces" v-html="province.name" :value="province.province_id"></option>
 				</select>
 			</div>
-			<div class="fl-l">����ѡ��</div>
+			<div class="fl-l">???????</div>
 			<div class="fl-l" style="margin-left:10px">
 				<select v-model="curr_city_id">
 					<option v-for="city in cities" v-html="city.name" :value="city.city_id" v-if="city.province_id==curr_province_id"></option>
@@ -261,42 +261,42 @@
 		</div>
 	</div>
 	<div style="height:45px;line-height:45px;font-size:1.5rem;color:#999">
-		���ӷ�Դ
+		??????
 	</div>
 	<div class="content2">
 		<div class="row mg-top-20">
 			<div class="fl-l" style="width:49%;height:100%;position:relative;">
 				<div style="margin-top:20px">
-					<span>С��:</span>
+					<span>��??:</span>
 					<select v-model="curr_community_id">
 						<option v-for="community in communities" v-if="community.ta_id == curr_ta_id" :value="community.community_id" v-html="community.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_community')">����С��</span>
+					<span class="btn" @click="showPanel('add_community')">????��??</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>����:</span>
+					<span>????:</span>
 					<select v-model="curr_bb_id">
 						<option v-for="building_block in building_blocks" v-if="building_block.community_id == curr_community_id" :value="building_block.bb_id" v-html="building_block.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_building_block')">��������</span>
+					<span class="btn" @click="showPanel('add_building_block')">????????</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>��Ԫ:</span>
+					<span>???:</span>
 					<select v-model="curr_bu_id">
 						<option v-for="building_unit in building_units" v-if="building_unit.bb_id == curr_bb_id" :value="building_unit.bu_id" v-html="building_unit.name"></option>
 					</select>
-					<span class="btn" @click="showPanel('add_building_unit')">������Ԫ</span>
+					<span class="btn" @click="showPanel('add_building_unit')">???????</span>
 				</div>
 				<div style="margin-top:20px">
-					<span>¥��:</span>
+					<span>???:</span>
 					<select v-model="curr_floor">
 						<option v-for="floor in floors" :value="floor" v-html="floor"></option>
 					</select>
 				</div>
 				<div style="margin-top:20px">
-					<span>����:</span>
-					<input type="text" placeholder="���������ƣ����������|�ָ�" v-model="house_add.names"></input>
-					<span class="btn" @click="addHouses()">��������</span>
+					<span>????:</span>
+					<input type="text" placeholder="????????????????????|???" v-model="house_add.names"></input>
+					<span class="btn" @click="addHouses()">????????</span>
 				</div>
 				<div style="margin-top:20px" class="house-list">
 					<div v-for="house in houses" v-if="house.floor==curr_floor&&house.bu_id==curr_bu_id" class="btn fl-l" style="position:relative;margin-left:30px;margin-bottom:10px;">
@@ -308,35 +308,35 @@
 			</div>
 			<div class="fl-l" style="width:49%;height:100%;position:relative;">
 				<div class="create_community" v-show="show_panel=='add_community'">
-					<p><span>С�����ƣ�</span><input type="text" v-model="community_add.name"></input><span class="btn" @click="resolvePos()">��ͼ��λ</span></p>
+					<p><span>��???????</span><input type="text" v-model="community_add.name"></input><span class="btn" @click="resolvePos()">?????��</span></p>
 					<div id="map-community" style="width:200px;height:150px"></div>
 					<p>
-						<span>�ֶ����룺</span>
-						<span>���ȣ�</span><input type="text" v-model="community_add.lat"></input>
-						<span>γ�ȣ�</span><input type="text" v-model="community_add.lng"></input>
+						<span>???????</span>
+						<span>?????</span><input type="text" v-model="community_add.lat"></input>
+						<span>��???</span><input type="text" v-model="community_add.lng"></input>
 					</p>
 					<p>
-						<span>������Ϣ��</span><input type="text" v-model="community_add.retriving_info">
+						<span>?????????</span><input type="text" v-model="community_add.retriving_info">
 					</p>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addCommunity()">ȷ������</span>
+						<span class="btn" style="margin-top:50px" @click="addCommunity()">???????</span>
 					</p>
 				</div>
 				
 				<div class="create_bb" v-show="show_panel=='add_building_block'">
-					<p><span>�������ƣ�</span><input type="text" v-model="building_block_add.name"></input></p>
-					<p><span>���¥�㣺</span><input type="text" v-model="building_block_add.max_floor"></input>
-					<p><span>���¥�㣺</span><input type="text" v-model="building_block_add.min_floor"></input>
+					<p><span>?????????</span><input type="text" v-model="building_block_add.name"></input></p>
+					<p><span>??????</span><input type="text" v-model="building_block_add.max_floor"></input>
+					<p><span>??????</span><input type="text" v-model="building_block_add.min_floor"></input>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addBulidingBlock()">ȷ������</span>
+						<span class="btn" style="margin-top:50px" @click="addBulidingBlock()">???????</span>
 					</p>
 				</div>
 				
 				<div class="create_bu" v-show="show_panel=='add_building_unit'">
-					<p><span>��Ԫ���ƣ�</span><input type="text" v-model="building_unit_add.names"></input></p>
-					<p><span>�Ƿ���ݣ�</span><input type="check" v-model="building_unit_add.lift"></input></p>
+					<p><span>????????</span><input type="text" v-model="building_unit_add.names"></input></p>
+					<p><span>???????</span><input type="check" v-model="building_unit_add.lift"></input></p>
 					<p style="margin-top:50px">
-						<span class="btn" style="margin-top:50px" @click="addBulidingUnit()">ȷ������</span>
+						<span class="btn" style="margin-top:50px" @click="addBulidingUnit()">???????</span>
 					</p>
 				</div>
 			</div>
@@ -470,18 +470,18 @@
 				this.map.enableScrollWheelZoom(true);
 				this.map.disable3DBuilding();
 				console.log(this.map);
-				// ������ַ������ʵ��
+				// ????????????????
 				this.myGeo = new BMap.Geocoder();
-				// ����ַ���������ʾ�ڵ�ͼ��,��������ͼ��Ұ
+				// ?????????????????????,????????????
 				this.myGeo.getPoint(this.community_add.name, function(point){
 					if (point) {
 						console.log(point);
 						that.map.centerAndZoom(point, 18);
 						that.map.addOverlay(new BMap.Marker(point));
 					}else{
-						alert("��ѡ���ַû�н��������!");
+						alert("?????????��????????!");
 					}
-				}, "������");
+				}, "??????");
 			},
 			watch:{
 				curr_province_id:function(val,old_val) {
@@ -511,7 +511,7 @@
 					}
 					var that = this;
 					that.curr_bu_id = -1;
-					if($.inArray(val, this.loaded_build_blocks) < 0) {//�����ڣ���������Ƭ����С����������Ϣ
+					if($.inArray(val, this.loaded_build_blocks) < 0) {//????????????????????��???????????
 						API.invokeModuleCall(g_host_url,'house','queryBuildingUnits', {bb_id:val}, function(json) {
 							if(json.code == 0) {
 								that.loaded_build_blocks.push(val);
@@ -564,7 +564,7 @@
 				curr_ta_id:function(val) {
 					var that = this;
 					that.curr_community_id = -1;
-					if($.inArray(val, this.loaded_trade_areas) < 0) {//�����ڣ���������Ƭ����С����������Ϣ
+					if($.inArray(val, this.loaded_trade_areas) < 0) {//????????????????????��???????????
 						API.invokeModuleCall(g_host_url,'house','queryAreaCommunities', {ta_id:val}, function(json) {
 							if(json.code == 0) {
 								that.loaded_trade_areas.push(val);
@@ -626,19 +626,19 @@
 							that.map.centerAndZoom(point, 18);
 							that.map.addOverlay(new BMap.Marker(point));
 						}else{
-							alert("��ѡ���ַû�н��������!");
+							alert("?????????��????????!");
 						}
-					}, "������");
+					}, "??????");
 				},
 				showPanel:function(val) {
 					if(val == "add_community") {
 						if(!this.curr_ta_id || this.curr_ta_id == 0) {
-							alert('��ѡ����Ȧ');
+							alert('????????');
 							return;
 						}
 					} else if(val == 'add_building_block') {
 						if(!this.curr_community_id || this.curr_community_id == 0) {
-							alert('��ѡ��С��');
+							alert('?????��??');
 							return;
 						}
 					}
@@ -646,7 +646,7 @@
 				},
 				showCreateAreaDlg:function() {
 					if(this.curr_city_id == 0) {
-						alert('��ѡ�����');
+						alert('????????');
 						return;
 					}
 					this.show_create_area_dlg = true;
@@ -670,7 +670,7 @@
 				addBulidingBlock:function() {
 					var that = this;
 					if(!this.curr_community_id || this.curr_community_id == 0) {
-						alert('��ѡ��С��');
+						alert('?????��??');
 						return;
 					}
 					
@@ -685,7 +685,7 @@
 				addBulidingUnit:function() {
 					var that = this;
 					if(!this.curr_bb_id || this.curr_bb_id == 0) {
-						alert('��ѡ����');
+						alert('???????');
 						return;
 					}
 					
@@ -700,16 +700,16 @@
 				addHouses:function() {
 					var that = this;
 					if(this.curr_bb_id <= 0) {
-						alert('��ѡ����');
+						alert('???????');
 						return;
 					}
 					if(!this.curr_bu_id || this.curr_bu_id <= 0) {
-						alert('��ѡ��Ԫ');
+						alert('??????');
 						return;
 					}
 					
 					if(this.curr_floor <= -10) {
-						alert('������¥��');
+						alert('?????????');
 						return;
 					}
 					this.house_add.floor = this.curr_floor;
@@ -724,7 +724,7 @@
 				addCommunity:function() {
 					var that = this;
 					if(this.curr_ta_id == 0) {
-						alert('��ѡ����Ȧ');
+						alert('????????');
 						return;
 					}
 					

@@ -88,7 +88,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr v-for="(employee,index) in employees" v-if="index>=(curr_page_index-1)*10&&index<=curr_page_index*10">
+						<tr v-for="(employee,index) in employees">
 							<td v-html="getWorkno(employee)"></td>
 							<!--<td v-html="employee.mobile"></td>
 							<td v-html="employee.name"></td>-->

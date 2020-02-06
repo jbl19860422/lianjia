@@ -14,7 +14,7 @@
 	<link href="../../../static/public/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 	<link href="../../../static/css/base.css" rel="stylesheet">
 	<link href="../../../static/css/city_page.css" rel="stylesheet">
-	<link href="../../../static/css/availability.css" rel="stylesheet">
+	<link href="../../../static/css/availability.css?v=1" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../../../static/public/bootstrap/js/bootstrap.js"></script>
 	<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -1085,7 +1085,7 @@
 		},
 		methods:{
 			clickHouse:function() {
-				location.href = 'houseinfo/house_info_detail_page?house_info_id='+this.house.house_info_id;
+				window.open('houseinfo/house_info_detail_page?house_info_id='+this.house.house_info_id);
 				if(!this.visited) {
 					visitedHouses.push(this.house.house_info_id);
 					var date = new Date();

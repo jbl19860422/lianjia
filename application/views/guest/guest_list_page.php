@@ -483,7 +483,7 @@
 					date.setTime(date.getTime()+3600*12000);
 					$.cookie("visited_guests", JSON.stringify(visitedGuests), {expires:date});
 				}
-				location.href = 'guest/guest_detail_page?guest_id=' + this.guest.guest_id;
+				window.open('guest/guest_detail_page?guest_id=' + this.guest.guest_id);
 			}
 		}
 	});

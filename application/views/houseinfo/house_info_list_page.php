@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="../../../static/css/availability.css?v=1" rel="stylesheet">
+	<link href="../../../static/css/availability.css?v=100" rel="stylesheet">
 	<link href="../../../static/public/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 	<link href="../../../static/public/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 	<link href="../../../static/css/base.css" rel="stylesheet">
